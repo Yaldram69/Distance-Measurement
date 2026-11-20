@@ -52,3 +52,17 @@ The notebook `Face Distance.ipynb` expects `sample3.jpg` and `sample6.jpg` in th
 - The distance is in the unit of `W` (cm in the code's comments).
 - `utlis.py` is a helper library and is not used by the scripts in this repository.
 - Results depend on the camera being roughly perpendicular to the object and on the object's apparent width being accurate.
+
+## Pretrained YOLO weights (not included)
+
+The following off-the-shelf Ultralytics checkpoints were removed from this repository because they are publicly downloadable. The code loads them by name, and Ultralytics downloads them automatically on first use:
+
+- `yolov5s.pt`
+- `yolov8n.pt`
+
+```python
+from ultralytics import YOLO
+model = YOLO("yolov8n.pt")  # downloaded automatically if not present
+```
+
+Or download them manually from https://github.com/ultralytics/assets/releases
